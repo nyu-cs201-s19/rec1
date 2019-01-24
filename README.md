@@ -1,28 +1,39 @@
 # Computer Systems Organization : Recitation 01
 -----------------------------------------------
 
-The purpose of these exercises is to get you up and running with the tools & environment you will be using over the course of the semester. 
+The purpose of these exercises is to get you up and running with the tools & environment you will be using over the course of the semester. All of the tools that you should be using for this course are available in a standard Linux
+distribution. You may be able to install them on your own machine (and in some cases you should), but since there are many different setups and systems, we cannot provide support for the tools on your own system. 
+The graders and instructors will be using the provide Linux systems and your code has to function properly on those systems. 
+__Any code that you write this semester (for recitaions and for projects) has to _work_ (i.e., compile and run according to the specification) in those Linux environments.__ 
 
 You will do the following...
 
-* Install the Virtual Machine (VM) 
-* Confirm that Git is installed on your VM
-* Create a Github repository that is a 'fork' of this 'repository'.
-* 'Push' some commits to your new Github repository.   
-* Compile and execute some programs in C. 
+* Setup a workspace on Cloud9 (if not done already) 
+* Use a few basic Unix/Linux (or rather `bash` commands 
+* Confirm that `git` is installed in the workspace
+* Clone this repository to your workspace  
+* Compile and execute some programs in C 
 
 Detailed instructions on how to do these things are below. 
 
 ** For all things that require your email, please use your NYU email only.
 
-Step 1: Virtual Machine
------------------------
+## Part 1: Cloud9 Workspace 
 
-A virtual machine (VM) is an operating system OS or application environment that is installed on a 'host' computer which imitates dedicated hardware. The end user has the (roughtly) same experience on a virtual machine as they would have on dedicated hardware.
+This week you should setup a Cloud9 workspace that allows you to create and run programs in a very simple Linux environment that is based on the Ubuntu distribution. 
 
-You are required to do all labs on the class virtual machine (VM) based on Ubuntu Linux. To get the virtual machine running on your personal desktop or laptop,  follow the steps listed on the [course website](https://joannakl.github.io/cs201_s18/daily.html).
+Next week you will be given an account on the CIMS Linux server. 
 
-To login to your virtual machine use the login name *cso* and the password *spring18*.
+Login to Cloud9 at https://cs.nyu.edu/~joannakl/cs201_s19/ . You should have received an email invitation to join the team for the course. 
+
+Under _Your Team Subsctiptions_ you should see the _cs201_ team. Click on in. 
+
+You should now see a workspace with the description "ubuntu machine for use in cs201". __Do NOT open__ that workspace. 
+Use the _Clone_ button to 
+
+# Step 2: Unix/Linux Commands 
+
+http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/ 
 
 
 Step 2: Git & Github 
