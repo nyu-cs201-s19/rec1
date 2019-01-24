@@ -3,20 +3,24 @@
 
 The purpose of these exercises is to get you up and running with the tools & environment you will be using over the course of the semester. All of the tools that you should be using for this course are available in a standard Linux
 distribution. You may be able to install them on your own machine (and in some cases you should), but since there are many different setups and systems, we cannot provide support for the tools on your own system. 
-The graders and instructors will be using the provide Linux systems and your code has to function properly on those systems. 
+The graders and instructors will be using the provided Linux systems and your code has to function properly on those systems. 
+
 __Any code that you write this semester (for recitaions and for projects) has to _work_ (i.e., compile and run according to the specification) in those Linux environments.__ 
 
-You will do the following...
+TOday you will do the following...
 
 * Setup a workspace on Cloud9 (if not done already) 
-* Use a few basic Unix/Linux (or rather `bash` commands 
-* Confirm that `git` is installed in the workspace
+* Confirm that `git` is installed in the workspace and setup your own `git` identity
 * Clone this repository to your workspace  
+* Use a few basic Unix/Linux (or rather `bash` commands)
 * Compile and execute some programs in C 
 
 Detailed instructions on how to do these things are below. 
 
-** For all things that require your email, please use your NYU email only.
+__Note 1:__ Feel free to work with a partner or check in with people around you if you get stuck. If you are working with someone else, make sure that everybody in thr group follows the steps in the instructions on their own machine. The only way
+to learn these new tools is to use them! 
+
+__Note 2:__ It is very likely that you will not be able to finish everything during the recitation. If you do not finish, try to complete these exercises as soon as possible after the recitation and no later than your next week recitation.  
 
 ## Part 1: Cloud9 Workspace 
 
@@ -93,6 +97,8 @@ your fingers memorize the most often used commands.
 - `rm file` remove a file (there is no undoing it, so be very careful!)
 - `mkdir path` make a directory at the specified path
 - `rmdir path` remove the directory specified by the path (there is no undoing it, so be very careful!)
+- `touch file_name` update the access and modification times  the file to the current time; if the file does not exist A FILE argument that does not exist is created empty
+- `echo some_text` print the text to the standard output 
 - `file file_name` determine the type of a file
 - `less file_name` view the file in the terminal
 - `more file_name` view the file in the terminal
@@ -127,13 +133,12 @@ For each exercise there are suggested commands that might come in handy. You do 
 pages to figure out how to use those commands (`man cp` gives you the manual page for `cp` command). <br>
 (HINT: it may be useful to lookup what `history` command does to answer these questions). 
 
-* Change your current working directory to the directory named REPOSITORY_NAME. 
+* Change your current working directory to the directory named REPOSITORY_NAME.<br>(`cd`) 
 
-* In the 'unix' directory in this repository make a subdirectory called 'backup'. Copy unix/foo.txt into it.
+* In the 'unix' directory in this repository make a subdirectory called 'backup'. Copy the file foo.txt into it.
 <br>(`cd`, `mkdir`, `cp` )
 
-* Rename the file foo.txt to answers.txt using the command line. For all remaining unix exercises, write your answers into this file so we can use it for grading. Your answers should be  the commands that you used to solve the exercise (just type the command line commands into
-the file answers.txt - you can use any text editor for that).
+* Rename the original file foo.txt to bar.txt 
 <br>(`mv`  )
 
 * Under the root folder of the repository, create the directories `multiple/directories`. 
@@ -143,83 +148,47 @@ the file answers.txt - you can use any text editor for that).
 <br>(`touch`  )
 
 * Write "Hello !" into the file without opening it. 
-<br>(`cat` and many other options  )
+<br>(`cat`, `echo`, `>`, and many other options  )
 
 * Output the content of the file to the command line.
-<br>(`more`, `less`  )
+<br>(`more`, `less`, `cat`  )
 
-* Remove the folder multiple
+* Remove the folder multiple 
 <br>(`rm`, `rmdir` )
 
-* The Linux kernel repository maintained by Linus Torvalds can be found at https://github.com/torvalds/linux/tree/master/kernel . Using commend line only, download and
-extract the source code for one of the files located at: 
+* The Linux kernel repository maintained by Linus Torvalds can be found at https://github.com/torvalds/linux/tree/master/kernel . Using commend line only, download  the source code for one the file reboot.c located at 
 https://raw.githubusercontent.com/torvalds/linux/master/kernel/reboot.c
 <br>(`wget` )
 
-* Using the command line only (i.e., do not open the file itself in an editor), find out find out how many lines and how many characters are inside the reboot.c file.
+* Using the command line only (i.e., do not open the file itself in an editor), ind out how many lines and how many characters are inside the reboot.c file.
 <br>(`wc` ) 
 
-Make sure you have all the commands that you run listed in `answers.txt`. Commit and push your changes. 
+* Create a file that contains the history of all of the commands that you executed in the steps above. Name this file 
+`answers.txt`.  
+
+
+__Submitting your work__ 
+
+__Note:__ this is not going to be possible until your have your own repository for recitation 1.
+
+Once you completed some significant part of the work on an assignment, you should upload the changes that you made to the remote repository on GitHub. You also have to make sure that your final version is in the repository on GitHub prior to the due date. 
+
+To upload the changes you need to complete two steps: commit the changes to the repository and then push them to the remote location. You should run the following commands. Carefully read the output of each of them to verify that it succeeded. 
+
+  git add -A    
+  git commit -m "answered on questions in part 2" 
+  git push origin master    
+
+The first step `git add ...` allows you to specify the list of files that you want to add to the repository and them send to the remote location. The `-A` option tells `git` to add all of the files that you modified or created. 
+
+The second step `git commit - m "...."` adds the files to the repository (BUT only in your workspace, not in the remote locations).
+
+The final step `git push origin mast` tells `git` to transmit the files to the remote location in the course organization on GitHub. 
+To verify that this step was successful, go to the repository named `YOUR_USERNAME-rec1` in the course organization and verify that all of the files that you created (especially the file answerts.txt) are there. 
 
 
 
-
-Step 2: Git & Github 
---------------------
-
-Git is a “version control system”. It provides, among other things, change tracking for source files. It comes preinstalled on your VM. 
-
-* You can test the install of git on your system by running the command `git` from terminal (Start Menu > Accessories > LXTerminal). 
-* Run the following commands from terminal:<br>
-   ```git config --global user.email "you@nyu.edu"```<br>
-   ```git config --global user.name "Your Name"```<br>
-   (The email should be the same email you used to register your github account)
-
-Github is Git hosting service. This means they run the servers that host our remote Git repositories. A repository is just  some source code organized into a collection. 
-
-Github has donated an 'organization' for our class. An organization is just a private site for us to share repositories as a group. Our organization is called 'nyu-cs201-s18'.
-
-Github will contain repositories for each of homeworks, in-class code, etc. We will effectively download the code from Git to work on it, then we will upload the code back to Github so it can be graded. We will be dooing this all with git commands on the command line.
-
-* To learn more about git version control, watch the [git basics videos](http://git-scm.com/videos).
-* To learn more about Github, watch [this YouTube video](https://www.youtube.com/watch?v=0fKg7e37bQE).
-* A [simple git cheatsheet](http://rogerdudler.github.io/git-guide/). 
-* A [complete reference](http://www.git-scm.com/book/en/v2).
-* A few other tutorials that may be useful:
-    * [An Intro to Git and GitHub for Beginners](http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) by Meghan Nelson
-    * [GitHub for Beginners: Don't Get Scared, Get Started](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1/) by Lauren Orsini  
-    
-
-More on Git & Github will be covered in lectures and recitations later on, but you should use the above tutorials to learn as much as you can ahead of time. 
-
-Step 3: Fork the rec1 repository and push a commit
---------------------------------------------------
-
-You should have received an email from Github notifying you that you have been added to the 'nyu-cs201-s18' organization. This means you have access to class repositories. This is where you will get your lab assignments as well as code used in class.
-
-* In your VM, open a browser to this respository.
-* Click the 'Fork' button on the top right corner. Select your username as the fork destination. (The forked repository contains your own private copy of the files for the recitation. Any changes you make to those files
-do not affect the original repository that everybody else is looking at.)
-* Once the repo is created, click HTTPS and then copy to your clipboard the 'HTTPS clone URL' from the text
-box (the text should look as follows 'https://github.com/YOUR_GITHUB_USERNAME/rec1.git' - this will be 
-different for different repositories).
-* Choose a place on your VM for your homeworks to reside and open a terminal to that location (good locations 
-are a dedicated directory in your home folder or a directory on your Desktop).
-* Execute the following series of commands: <br/>
-  ```git clone https://github.com/YOUR-GITHUB-USERNAME/rec1.git```<br/>
-  ```cd rec1  ```<br/>
-  ```touch cso-rocks.txt   ```<br/>
-  
-  `touch` creates an empty file named cso-rocks.txt in your rec1 directory. You can use a text editor to add some 
-  content to it (there are a few text editors installed on the virtual machine: vim, emacs, geany, leafpad). 
-  
-  ```git add cso-rocks.txt    ```<br/>
-  ```git commit -m "First commit" cso-rocks.txt   ```<br/>
-  ```git push origin master   ```<br/>  
-
-    You should now see a file 'cso-'rocks.txt' on the Github page for your fork of the rec1 repository. 
-
-Step 4: 'Hello World'   
+## Part 4: 'Hello World'   
 ---------------------
 
 You use the C compiler command `gcc`, to compile C programs. gcc comes preinstalled on your VM. 
@@ -234,16 +203,3 @@ You use the C compiler command `gcc`, to compile C programs. gcc comes preinstal
 "Hello CSO. My name is YOUR_NAME" message (replace YOUR_NAME with your actual name!). 
 Save the files and commit the changes to your GitHub repository. 
 
-Step 5: Install Sublime (Optional)
-----------------------------------
-
-We will need some editor into which we will write code. You can choose whatever editor you want, however we are going to stay away from full fledged IDE's for the most part during this course, we want to become command-line masters!
-
-The obvious choices, VIM and Emacs are somewhat challenging to learn (though very powerful when you do!). So if you are not familiar with them, I suggest you use [Sublime 2](https://www.sublimetext.com/). Its easy to use and provides a number of nice features for developers. 
-
-* In your VM, open a terminal and run the following series of commands<br/>
-  ```sudo add-apt-repository -y ppa:webupd8team/sublime-text-2  ```<br/>
-  ```sudo apt-get update  ```<br/>
-  ```sudo apt-get install sublime-text  ```<br/>
-
-Using an editor will be much more convenient than writing code into something that resembles notepad.
