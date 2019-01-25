@@ -121,7 +121,7 @@ If you did not complete the form with your GitHub username, than you will need t
 
 Clone the recitation 1 repository to your own workspace (this time it is the workspace on Cloud9 instance):
 
-   git clone https://github.com/nyu-cs201-s19/REPOSITORY_NAME 
+    git clone https://github.com/nyu-cs201-s19/REPOSITORY_NAME 
    
 You will be prompted for your username and password on GitHub. (Note that when you type the password, you will not see any text in the terminal. This is normal behavior on a Linux system.) 
    
@@ -175,9 +175,9 @@ Once you completed some significant part of the work on an assignment, you shoul
 
 To upload the changes you need to complete two steps: commit the changes to the repository and then push them to the remote location. You should run the following commands. Carefully read the output of each of them to verify that it succeeded. 
 
-  git add -A    
-  git commit -m "answered on questions in part 3" 
-  git push origin master    
+    git add -A    
+    git commit -m "answered on questions in part 3" 
+    git push origin master    
 
 The first step `git add ...` allows you to specify the list of files that you want to add to the repository and them send to the remote location. The `-A` option tells `git` to add all of the files that you modified or created. 
 
