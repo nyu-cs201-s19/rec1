@@ -189,7 +189,6 @@ To verify that this step was successful, go to the repository named `YOUR_USERNA
 
 
 ## Part 4: 'Hello World'   
----------------------
 
 To use the C compiler, you can run the `gcc` command. `gcc`  comes preinstalled in your Linux workspace. 
 
