@@ -164,7 +164,7 @@ https://raw.githubusercontent.com/torvalds/linux/master/kernel/reboot.c
 <br>(`wc` ) 
 
 * Create a file that contains the history of all of the commands that you executed in the steps above. Name this file 
-`answers.txt`.  
+`answers.txt`.  This file should be stored at the top level of your repository (i.e., not inside any subdirectory of rec1). <br>(`history`, `>`) 
 
 
 __Submitting your work__ 
@@ -176,12 +176,12 @@ Once you completed some significant part of the work on an assignment, you shoul
 To upload the changes you need to complete two steps: commit the changes to the repository and then push them to the remote location. You should run the following commands. Carefully read the output of each of them to verify that it succeeded. 
 
   git add -A    
-  git commit -m "answered on questions in part 2" 
+  git commit -m "answered on questions in part 3" 
   git push origin master    
 
 The first step `git add ...` allows you to specify the list of files that you want to add to the repository and them send to the remote location. The `-A` option tells `git` to add all of the files that you modified or created. 
 
-The second step `git commit - m "...."` adds the files to the repository (BUT only in your workspace, not in the remote locations).
+The second step `git commit - m "...."` adds the files to the repository (BUT only in your workspace, not in the remote locations). The message after the `-m` option is very important: it describes what is the reason for the commit (example: "finished part 3", or "problem 2 is working now"). It tells you and whoever is looking at your repository (here: graders and instructors) what you did. 
 
 The final step `git push origin mast` tells `git` to transmit the files to the remote location in the course organization on GitHub. 
 To verify that this step was successful, go to the repository named `YOUR_USERNAME-rec1` in the course organization and verify that all of the files that you created (especially the file answerts.txt) are there. 
@@ -191,15 +191,24 @@ To verify that this step was successful, go to the repository named `YOUR_USERNA
 ## Part 4: 'Hello World'   
 ---------------------
 
-You use the C compiler command `gcc`, to compile C programs. gcc comes preinstalled on your VM. 
+To use the C compiler, you can run the `gcc` command. `gcc`  comes preinstalled in your Linux workspace. 
 
-`gcc`, as well as many key pieces of development software (e.g. the C library, `make`, `gdb`), have been developed by [GNU](http://www.gnu.org/). That's why you hear people sometimes refer to GNU/Linux since strictly speaking, Linux is just the kernel of the OS and not the complete system.
+Perform each of the steps below to read, modify, compile and run a simple C program. You can use the editor that is built into the Cloud 9 IDE to view the files (alternatively, you can use one of the command line editors to view and edit the files without using a graphical editor: `nano`, `vi`, `emacs`). 
 
-* Open and **read the comments** in `basic.c`
-* Compile the `basic.c` C file, type `gcc basic.c` in the terminal. This generates an executable `a.out`. 
-* Execute it by typing `./a.out`
-* Repeat the above three steps for `standard.c`
-* Edit the `basic.c` (using any text editor on the virutal machine) so that the program prints
+- Open and **read the comments** in `basic.c`. 
+- Compile the `basic.c` C file. Use `gcc basic.c` in the terminal. This generates an executable `a.out` file (you can run `ls` to verify that the file is actually there). 
+- Execute it by typing `./a.out`
+- Repeat the above three steps for `standard.c` (__remember to read the file first__). 
+- Edit the `basic.c` so that the program prints
 "Hello CSO. My name is YOUR_NAME" message (replace YOUR_NAME with your actual name!). 
-Save the files and commit the changes to your GitHub repository. 
+Save the file. Make sure that it compiles and runs correctly. 
+
+
+Finally, you should commit the changed basic.c file to your GitHub repository. (You can only perform this step if you have your own repository for recitation 1, not the shared one.)  
+
+
+
+
+
+
 
